@@ -1,2 +1,2 @@
-# string-resolver
+# replacer
 A configurable string replacer tool
