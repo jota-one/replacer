@@ -1,0 +1,29 @@
+{
+  "name": "replacer",
+  "version": "1.0.0",
+  "description": "A configurable string replacer tool",
+  "main": "cjs.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jota-one/replacer.git"
+  },
+  "keywords": [
+    "string",
+    "replace",
+    "replacer",
+    "placeholder"
+  ],
+  "author": "Juniors at Work",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jota-one/replacer/issues"
+  },
+  "homepage": "https://github.com/jota-one/replacer#readme",
+  "devDependencies": {
+    "esbuild": "^0.6.27"
+  }
+}
