@@ -1,6 +1,6 @@
 {
   "name": "replacer",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A configurable string replacer tool",
   "main": "cjs.js",
   "module": "index.js",
