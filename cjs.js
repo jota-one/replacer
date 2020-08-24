@@ -14,16 +14,16 @@ __export(exports, {
   replace: () => replace,
   replaceExpress: () => replaceExpress
 });
-const getReplacer = (pattern, extractionCb) => {
+const getReplacer = (pattern) => {
   return function(str = "", ...maps) {
     if (!str) {
       return "";
     }
-    return str.replace(pattern, function(term) {
-      const key = extractionCb(term);
-      return maps[key] !== void 0 ? maps[key] : term;
+    const params = maps.reverse().reduce((acc, map) => ({...acc, ...map}));
+    return str.replace(pattern, function(term, key) {
+      return params[key] !== void 0 ? params[key] : term;
     });
   };
 };
-const replace = getReplacer(/{([^{}]+)}/gmi, (term) => term.substring(1).slice(0, -1));
-const replaceExpress = getReplacer(/:\w+/g, (term) => term.substring(1));
+const replace = getReplacer(/{([^{}]+)}/gmi);
+const replaceExpress = getReplacer(/:(\w+)/g);
