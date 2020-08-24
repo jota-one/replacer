@@ -5,7 +5,7 @@
   "main": "cjs.js",
   "module": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,13 @@
   },
   "homepage": "https://github.com/jota-one/replacer#readme",
   "devDependencies": {
+    "ava": "^3.12.1",
+    "esm": "^3.2.25",
     "esbuild": "^0.6.27"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }
