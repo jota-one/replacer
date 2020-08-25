@@ -1,5 +1,5 @@
 import test from 'ava'
-import { getReplacer, replace } from './index'
+import {extractPlaceholders, getReplacer, replace} from './index'
 
 test('getReplacer returns a function', t => {
   const result = getReplacer(/.*/, () => true)
@@ -12,6 +12,14 @@ test('replace() replaces...', t => {
   const result = replace(str, placeholders)
 
   t.is(result, 'I want a cheeseburger!')
+})
+
+test('replace() replaces many times if needed...', t => {
+  const str = 'I want a {what} and another {what}!'
+  const placeholders = { what: 'cheeseburger' }
+  const result = replace(str, placeholders)
+
+  t.is(result, 'I want a cheeseburger and another cheeseburger!')
 })
 
 test('replace() recognize words between curly braces...', t => {
@@ -76,4 +84,11 @@ test('But another replacer could, by ignoring the nested placeholder...', t => {
   const result = replaceReloaded(str, placeholders)
 
   t.is(result, 'I want a big mac!')
+})
+
+test('extractPlaceholders() extracts placeholders surrounded by curly braces', t => {
+  const str = 'I want a {what} and a {drink}!'
+  const result = extractPlaceholders(str)
+
+  t.deepEqual(result, ['what', 'drink'])
 })
