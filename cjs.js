@@ -10,6 +10,8 @@ var __export = (target, all) => {
 
 // index.js
 __export(exports, {
+  extractPlaceholders: () => extractPlaceholders,
+  getExtractor: () => getExtractor,
   getReplacer: () => getReplacer,
   replace: () => replace,
   replaceExpress: () => replaceExpress
@@ -25,5 +27,19 @@ const getReplacer = (pattern) => {
     });
   };
 };
+const getExtractor = (pattern) => {
+  return function(str) {
+    if (!str) {
+      return [];
+    }
+    let match;
+    let result = [];
+    while (match = pattern.exec(str)) {
+      result.push(match[1]);
+    }
+    return result;
+  };
+};
 const replace = getReplacer(/{([^{}]+)}/gmi);
+const extractPlaceholders = getExtractor(/{([^{}]+)}/gmi);
 const replaceExpress = getReplacer(/:(\w+)/g);

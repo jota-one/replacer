@@ -1,6 +1,6 @@
 {
   "name": "@jota-one/replacer",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A configurable string replacer tool",
   "main": "cjs.js",
   "module": "index.js",
