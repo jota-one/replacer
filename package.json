@@ -1,10 +1,11 @@
 {
   "name": "@jota-one/replacer",
   "version": "0.3.2",
+  "type": "module",
   "description": "A configurable string replacer tool",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
-  "type": "module",
+  "types": "index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
