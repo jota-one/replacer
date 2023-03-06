@@ -2,16 +2,18 @@
   "name": "@jota-one/replacer",
   "version": "0.3.2",
   "description": "A configurable string replacer tool",
-  "main": "cjs.js",
-  "module": "index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./cjs.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
+  "files": ["dist/*", "index.d.ts"],
   "scripts": {
-    "build": "node build.js",
+    "build": "node build.cjs",
     "test": "ava"
   },
   "repository": {
