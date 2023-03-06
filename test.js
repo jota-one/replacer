@@ -1,5 +1,5 @@
 import test from 'ava'
-import {extractPlaceholders, getReplacer, replace} from './index'
+import {extractPlaceholders, getReplacer, replace} from './index.js'
 
 test('getReplacer returns a function', t => {
   const result = getReplacer(/.*/, () => true)
