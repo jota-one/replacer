@@ -37,9 +37,10 @@
   },
   "homepage": "https://github.com/jota-one/replacer#readme",
   "devDependencies": {
+    "auto": "^10.43.0",
     "ava": "^3.12.1",
-    "esm": "^3.2.25",
-    "esbuild": "^0.6.27"
+    "esbuild": "^0.6.27",
+    "esm": "^3.2.25"
   },
   "ava": {
     "require": [
