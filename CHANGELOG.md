@@ -1,3 +1,16 @@
+# v0.5.0 (Mon Mar 20 2023)
+
+#### 🚀 Enhancement
+
+- ci: added missing auto dependency [#2](https://github.com/jota-one/replacer/pull/2) (joel@jota.one [@jorinho](https://github.com/jorinho))
+
+#### Authors: 2
+
+- Joel Poulin (joel@jota.one)
+- Jorinho ([@jorinho](https://github.com/jorinho))
+
+---
+
 # v0.4.0 (Mon Mar 06 2023)
 
 #### 🚀 Enhancement
